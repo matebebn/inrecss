@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/inrecssdb?useSSL=false</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+
+
+		<!-- Echo All Executed SQL To Console -->
+		<property name="show_sql">true</property>
+
+
+
+		<!-- Mapping With Model Class Containing Annotations -->
+		<mapping class="com.sys.inrecss.model.User" />
+		<mapping class="com.sys.inrecss.model.Event" />
+		<mapping class="com.sys.inrecss.model.Payment" />
+		<mapping class="com.sys.inrecss.model.Feedback" />
+		<mapping class="com.sys.inrecss.model.Member" />
+		<mapping class="com.sys.inrecss.model.Shedule" />
+		<mapping class="com.sys.inrecss.model.ResetPassword" />
+
+	</session-factory>
+</hibernate-configuration>
